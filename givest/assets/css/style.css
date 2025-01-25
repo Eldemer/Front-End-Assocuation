@@ -4200,7 +4200,7 @@ table p {
 }
 @media (max-width: 1799px) {
   .service-area.service-default-area {
-    padding: 90px 0;
+    padding: 0 0;
   }
 }
 @media only screen and (max-width: 1399px) {
@@ -9549,3 +9549,49 @@ table p {
     margin-bottom: 0 !important;
   }
 }
+
+
+/* arabic font */
+.ibm-plex-sans-arabic-thin {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-extralight {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-light {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-regular {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-medium {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-semibold {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-bold {
+  font-family: "IBM Plex Sans Arabic", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Noto+Kufi+Arabic:wght@100..900&family=Playwrite+DE+Grund:wght@100..400&family=Rakkas&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');

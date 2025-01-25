@@ -5,11 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- For font Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
 
-    <title>Givest – Non Profit Bootstrap 5 HTML Template</title>
+    <title > جمعية التجارة الالكترونية </title>
 
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
 
     <!--== Google Fonts ==-->
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400" rel="stylesheet">
@@ -51,11 +55,11 @@
         <span></span>
       </div>
     </div>
-  </div>
+  </div>  
   <!--== End Preloader Content ==-->
 
   <!--== Start Header Wrapper ==-->
-  <header class="header-area header-default sticky-header">
+  <!-- <header class="header-area header-default sticky-header">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-5 col-sm-3 col-md-3 col-lg-2 pr-0">
@@ -105,10 +109,109 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
   <!--== End Header Wrapper ==-->
+
+<!--== بداية الهيدر ==-->
+<!-- <header class="header-area header-default sticky-header" dir="rtl">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-5 col-sm-3 col-md-3 col-lg-2 pl-0">
+        <div class="header-logo-area">
+          <a href="index.html">
+            <img class="logo-main" src="assets/img/logo.png" alt="الشعار" />
+            <img class="logo-light" src="assets/img/logo.png" alt="الشعار" />
+          </a>
+        </div>
+      </div>
+      <div class="col-7 col-sm-9 col-md-9 col-lg-10">
+        <div class="header-align">
+          <div class="header-navigation-area">
+            <ul class="main-menu nav justify-content-center">
+              <li ><a href="index.html">الرئيسية</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li class="has-submenu"><a href="causes.html">الأسباب</a>
+                <ul class="submenu-nav">
+                  <li><a href="causes.html">الأسباب</a></li>
+                  <li><a href="causes-details.html">تفاصيل الأسباب</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu"><a href="blog.html">المدونة</a>
+                <ul class="submenu-nav">
+                  <li><a href="blog.html">شبكة المدونة</a></li>
+                  <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu"><a href="index.html">الصفحات</a>
+                <ul class="submenu-nav">
+                  <li><a href="event-details.html">تفاصيل الفعالية</a></li>
+                  <li><a href="volunteer.html">التطوع</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+          </div>
+          <div class="header-action-area">
+            <button class="btn-menu d-xl-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> -->
+<!--== نهاية الهيدر ==-->
+
+<!--== بداية الهيدر ==-->
+<header class="header-area header-default sticky-header" dir="rtl" style="background-color: #ffffff; border-bottom: 2px solid #007bff;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-5 col-sm-3 col-md-3 col-lg-2 pl-0">
+        <div class="header-logo-area">
+          <a href="index.html">
+            <img class="logo-main" src="assets/img/logo.png" width=80px  />
+          </a>
+        </div>
+      </div>
+      <div class="col-7 col-sm-9 col-md-9 col-lg-10">
+        <div class="header-align ">
+          <div class="header-navigation-area">
+            <ul class="main-menu nav justify-content-center" style="margin: 0; padding: 0;">
+              
+              <li  class="ibm-plex-sans-arabic-regular text-center"><a href="index.html" style="color:black; font-weight: bold;" >الرئيسية</a></li>
+              <li  class="ibm-plex-sans-arabic-regular text-center"><a href="about.html" style="color: black; font-weight: bold;" >من نحن</a></li>
+              <li  class="ibm-plex-sans-arabic-regular text-center"><a href="membership.html" style="color: black; font-weight: bold;">العضوية</a></li>
+              <li  class="ibm-plex-sans-arabic-regular text-center"><a href="sponsors.html" style="color: black; font-weight: bold;">الرعاة</a></li>
+              <li  class="ibm-plex-sans-arabic-regular text-center"><a href="rules.html" style="color: black; font-weight: bold;" >الأنظمة والقوانين</a></li>
+            </ul>
+          </div>
+          <div class="header-action-area">
+            <button class="btn-menu d-xl-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <select  class="ibm-plex-sans-arabic-bold " id="languageSwitcher" style="margin-left: 10px; padding: 5px; border:0ch">
+              <option value="ar" selected>العربية</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> 
+<!--== نهاية الهيدر ==-->
+
+
+
+
+
   
-  <main class="main-content">
+  <main class="main-content" dir="rtl">
     <!--== Start Hero Area Wrapper ==-->
     <section class="home-slider-area slider-default">
       <div class="home-slider-content">
@@ -120,15 +223,17 @@
                 <div class="col-md-6 col-lg-6 col-xl-7">
                   <div class="content" data-aos="fade-right" data-aos-duration="1000">
                     <div class="subtitle-content">
-                      <img src="assets/img/icons/1.png" alt="Givest-HasTech">
-                      <h6>Change The World.</h6>
+
+                      <h4 class="ibm-plex-sans-arabic-regular" >شريكك نحو الريادة الرقمية  
+                       <img src="assets/img/icons/1.png" alt="Givest-HasTech">
+                      </h2>
+
                     </div>
                     <div class="tittle-wrp">
-                      <h2>Need Your Big Hand For <span>Change</span> The World.</h2>
+                      <h2 class="ibm-plex-sans-arabic-thin">معًا نبني مستقبل التجارة الإلكترونية في السعودية.</h2>
                     </div>
                     <div class="btn-wrp">
-                      <a href="causes.html" class="btn-theme btn-gradient btn-slide btn-style">All Causes <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
-                      <a href="#/" class="btn-theme btn-border btn-black btn-style">Donate Now <img class="icon icon-img" src="assets/img/icons/arrow-right-line-dark.png" alt="Icon"></a>
+                      <a href="#/" class="btn-theme btn-border btn-black btn-style ibm-plex-sans-arabic-light text-center"  >انضم إلينا <img class="icon icon-img" src="assets/img/icons/arrow-right-line-dark.png" alt="Icon"></a>
                     </div>
                   </div>
                 </div>
@@ -136,7 +241,9 @@
                   <div class="layer-style">
                     <div class="thumb scene">
                       <span class="scene-layer" data-depth="0.20">                     
-                        <img class="" src="assets/img/slider/1.jpg" alt="Image-Givest">
+                        <a href="index.html">
+                          <img  src="assets/img/slider/1.jpg" height=634px width=612px  alt="Image-Givest">
+                        </a>
                       </span>
                       <div class="shape-circle scene">
                         <span class="scene-layer" data-depth="0.10">
@@ -152,32 +259,13 @@
                         <img src="assets/img/shape/1.png" alt="Image-Givest">
                       </span>
                     </div>
-                    <div class="donate-circle-wrp">
-                      <div class="pie-chart-circle" data-size="255" data-line-width="8" data-line-cap="butt" data-track-color="#ffffff54" data-bar-color="#fff" data-percent="68"></div>
-                      <div class="donate-content">
-                        <div class="raised-amount">$865M</div>
-                        <img class="line-shape-img" src="assets/img/shape/line-s2.png" alt="Image-Givest">
-                        <h5 class="donate-title">Total Raised</h5>
-                      </div>
+                    
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="slider-shape">
-              <div class="shape-style1">
-                <img class="shape-img1" src="assets/img/shape/map1.png" alt="Image-Givest">
-              </div>
-              <div class="shape-style2">
-                <img class="shape-img2" src="assets/img/shape/map2.png" alt="Image-Givest">
-              </div>
-              <div class="shape-style3">
-                <img class="shape-img3" src="assets/img/shape/banner-line1.png" alt="Image-Givest">
-              </div>
-              <div class="shape-style4">
-                <img class="shape-img3" src="assets/img/shape/banner-line2.png" alt="Image-Givest">
-              </div>
-            </div>
+
           </div>
         </div>
         <!-- End Slide Item -->
@@ -185,8 +273,12 @@
     </section>
     <!--== End Hero Area Wrapper ==-->
 
+
+
+
+
     <!--== Start Service Area ==-->
-    <section class="service-area service-default-area">
+    <!-- <section class="service-area service-default-area">
       <div class="container">
         <div class="row icon-box-style1" data-aos="fade-up" data-aos-duration="1000">
           <div class="col-md-6 col-lg-4">
@@ -242,16 +334,89 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--== End Service Area ==-->
+
+    <!--== Start Service Area ==-->
+<section class="service-area service-default-area">
+  <div class="container">
+    <!-- وصف الجمعية -->
+    <div class="row" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12 ul text-center mb-5">
+        <h2 class="section-title ibm-plex-sans-arabic-regular">جمعية التجارة الإلكترونية</h2>
+        <p class="section-subtitle ">
+          الأولى من نوعها في المملكة، تجمع بين الابتكار، التدريب، والدعم لتحقيق قفزة نوعية في السوق الرقمي السعودي.
+        </p>
+      </div>
+    </div>
+
+    <!-- الأرقام والتأثير -->
+    <div class="row text-center icon-box-style1 mb-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-md-4">
+        <div class="icon-box-item ibm-plex-sans-arabic-regular">
+          <h3 class="title">47%</h3>
+          <p>من أهداف رؤية المملكة 2030 تتقاطع مع أهدافنا</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box-item ibm-plex-sans-arabic-regular">
+          <h3 class="title">دعم مئات</h3>
+          <p>من المشاريع الوطنية الناشئة</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box-item ibm-plex-sans-arabic-regular">
+          <h3 class="title">فرص عمل جديدة</h3>
+          <p>في سوق العمل السعودي</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- أهداف الجمعية -->
+    <div class="row" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12">
+        <h3 class="section-title">أهداف الجمعية</h3>
+        <ul class="list-group">
+          <li class="list-group-item">تطوير التجارة الإلكترونية لتعزيز الاقتصاد الوطني</li>
+          <li class="list-group-item">دعم المشاريع التقنية الناشئة</li>
+          <li class="list-group-item">رفع الوعي بالمخاطر والتحديات في السوق الرقمي</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- الفعاليات والمشاريع الرئيسية -->
+    <div class="row mt-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12">
+        <h3 class="section-title">فعاليات ومشاريع رئيسية</h3>
+        <ul class="list-group">
+          <li class="list-group-item">حاضنة أعمال لدعم المشاريع الوطنية</li>
+          <li class="list-group-item">دليل شامل لمزودي الخدمة في المملكة</li>
+          <li class="list-group-item">مؤتمر ومعرض سنوي للتجارة الإلكترونية</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- دعوة للانضمام -->
+    <div class="row text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12">
+        <a href="membership-request.html" class="btn-theme btn-primary btn-size-lg">قدم طلب عضوية الآن</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--== End Service Area ==-->
+
+
+
+
 
     <!--== Start About Area ==-->
     <section class="about-area about-default-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-9">
-            <div class="section-title position-relative z-index-1" data-aos="fade-up" data-aos-duration="1000">
-              <h5 class="subtitle line-theme-color">About Us.</h5>
+            <div class="section-title position-relative z-index-1 " data-aos="fade-up" data-aos-duration="1000">
+              <h6 class="subtitle line-theme-color  ">About Us</h6>
               <h2 class="title"><span>Givest</span> is The Non Profitable Organization.</h2>
             </div>
           </div>
@@ -1027,6 +1192,62 @@
 
 <!--=== Custom Js ===-->
 <script src="assets/js/custom.js"></script>
+
+
+<!-- for Localization -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.9.1/i18next.min.js"></script>
+<script>
+  // تعريف النصوص
+  const resources = {
+    en: {
+      translation: {
+        home: "Home",
+        about: "About Us",
+        membership: "Membership",
+        sponsors: "Sponsors",
+        rules: "Rules & Regulations",
+      },
+    },
+    ar: {
+      translation: {
+        home: "الرئيسية",
+        about: "عن الجمعية",
+        membership: "العضوية",
+        sponsors: "الرعاة",
+        rules: "الأنظمة والقوانين",
+      },
+    },
+  };
+
+  // تهيئة i18next
+  i18next.init(
+    {
+      lng: "ar", // اللغة الافتراضية
+      debug: true,
+      resources,
+    },
+    function (err, t) {
+      updateContent(); // تحديث النصوص عند التهيئة
+    }
+  );
+
+  // تحديث النصوص بناءً على اللغة
+  function updateContent() {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = i18next.t(key);
+    });
+  }
+
+  // تبديل اللغة عند اختيارها
+  document
+    .getElementById("languageSwitcher")
+    .addEventListener("change", function (e) {
+      const selectedLanguage = e.target.value;
+      i18next.changeLanguage(selectedLanguage, updateContent);
+    });
+</script>
+
 
 </body>
 
