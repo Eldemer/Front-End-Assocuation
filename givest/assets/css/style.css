@@ -9594,4 +9594,31 @@ table p {
   font-style: normal;
 }
 
+.custom-list {
+list-style-type: none; /* إزالة الرموز الافتراضية */
+            padding: 0;
+            margin: 0;
+          }
+        
+          .custom-list-item {
+            background-color: #f9f9f9; /* لون خلفية ناعم */
+            color: #333; /* لون النص */
+            font-family: 'IBM Plex Sans Arabic', sans-serif; /* الخط */
+            font-size: 1rem; /* حجم النص */
+            margin: 0.5rem 0; /* مسافات بين العناصر */
+            padding: 0.75rem 1rem; /* حشوة داخلية */
+            border: 1px solid #ddd; /* حدود خفيفة */
+            border-radius: 8px; /* زوايا دائرية */
+            transition: all 0.3s ease; /* تأثيرات انتقالية */
+          }
+        
+          .custom-list-item:hover {
+            background-color: #eaeaea; /* لون مختلف عند التمرير */
+            cursor: pointer; /* مؤشر الفأرة */
+            transform: translateY(-2px); /* تأثير بسيط للحركة */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+        
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Noto+Kufi+Arabic:wght@100..900&family=Playwrite+DE+Grund:wght@100..400&family=Rakkas&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Noto+Kufi+Arabic:wght@100..900&family=Playwrite+DE+Grund:wght@100..400&family=Rakkas&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
