@@ -233,8 +233,279 @@ body {
 }
 
 
+.slider-content-area .row {
+  flex-direction: row-reverse; /* English: image on right, text on left */
+  text-align: right;
+  display: flex;
 
 
+  
+}
+
+/* Default Arabic Layout (Text on Right, Image on Left) */
+.dynamic-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* When switched to English (Text on Left, Image on Right) */
+.dynamic-layout.ltr {
+  flex-direction: row;
+  text-align: left;
+}
+
+/* Center Image */
+.dynamic-layout .thumb img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Buttons Consistency */
+.btn-wrp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-wrp a {
+  min-width: 180px; /* Ensure buttons have a consistent width */
+  margin: 5px;
+}
+/* Ensure content aligns correctly in both Arabic & English */
+.dynamic-layout {
+  display: flex;
+  flex-direction: row-reverse; /* Default: Arabic (RTL) */
+  text-align: right;
+  align-items: center;
+}
+
+/* Switch to LTR when English is selected */
+.dynamic-layout.ltr {
+  flex-direction: row;
+  text-align: left;
+}
+
+/* Section Title */
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #222;
+  text-transform: capitalize;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards 0.3s;
+}
+
+/* About Content Styling */
+.about-content {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards 0.5s;
+}
+
+/* Mission & Vision Boxes */
+.content-box-item {
+  background: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards 0.7s;
+}
+
+/* Vision Box with different color */
+.content-box-item.bg-warning {
+  background: #fea444 !important;
+  border-left-color: #d47f00;
+}
+
+/* Hover Effect */
+.content-box-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Default position for LTR */
+  width: 50px;
+  height: 50px;
+  background: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adjust for RTL Layout */
+html[dir="rtl"] .scroll-to-top {
+  right: auto;
+  left: 20px; /* Move to left for Arabic */
+}
+
+/* Scroll to Top Hover Effect */
+.scroll-to-top:hover {
+  background: #0056b3;
+}
+
+/* Ensure the Footer does not hide the button */
+.footer-area {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+/* Fix Footer Responsiveness */
+.footer-area .footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Default Margin for English (LTR) */
+.dynamic-margin {
+  margin-left: 12px; /* Push right in LTR */
+  margin-right: 0;
+}
+
+/* Adjust for Arabic (RTL) */
+html[dir="rtl"] .dynamic-margin {
+  margin-left: 0;
+  margin-right: 12px; /* Push left in RTL */
+}
+
+/* Social Icons Alignment */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.success-popup {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+}
+
+.success-popup.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 3s 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #c5300b;
+  border-radius: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background: #000000;
+  color: white;
+}
+
+/* When switched to English (Left-to-Right) */
+.slider-content-area.ltr .row  {
+ 
+  display: flex;
+  flex-direction: row-reverse; /* Arabic: text on right, image on left */
+  text-align: left;
+}
+
+
+.sponsor-items .sponsor-card {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* If this exists, change or remove it */
+.sponsors-area, .footer-main {
+  overflow: visible !important;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.footer-area {
+
+  background-color: #222;
+  color: #1c1919;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -9469,6 +9740,11 @@ table p {
     width: 100%;
   }
 }
+/* If this exists, change or remove it */
+.sponsors-area, .footer-main {
+  overflow: visible !important;
+}
+
 .footer-area .widget-gallery .gallery-item .icon {
   color: #fff;
   height: 100%;
