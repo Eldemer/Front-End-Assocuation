@@ -26,7 +26,7 @@
 body {
   color: #595959;
   font-size: 0.9375rem;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: 'STC', sans-serif;
   font-weight: 400;
   line-height: 1.8;
   margin: 0;
@@ -288,26 +288,70 @@ body {
 }
 
 /* Section Title */
-.section-title h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.3;
-  color: #222;
-  text-transform: capitalize;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-in-out forwards;
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
 }
 
-/* Subtitle */
-.subtitle {
-  font-size: 1.2rem;
-  color: #007bff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-in-out forwards 0.3s;
+.section-title .subtitle {
+    color: var(--subtitle-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title .title {
+    color: var(--title-color);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title .title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: #6c757d;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* RTL Support */
+[dir="rtl"] .section-title .title:after {
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title .subtitle {
+        font-size: 16px;
+    }
+    
+    .section-title .title {
+        font-size: 28px;
+    }
+    
+    .section-title p {
+        font-size: 14px;
+    }
 }
 
 /* About Content Styling */
@@ -318,7 +362,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1s ease-in-out forwards 0.5s;
+  animation: fadeInUp 1s ease-in-out forwards;
 }
 
 /* Mission & Vision Boxes */
@@ -510,11 +554,12 @@ html[dir="rtl"] .dynamic-margin {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #001d23;
-  font-family: "Yeseva One", cursive;
+  font-family: 'STC', sans-serif;
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 10px;
   margin-top: 0;
+
 }
 
 a {
@@ -654,7 +699,7 @@ table p {
 .section-title .subtitle {
   color: #fc6539;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: 'STC', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -3871,7 +3916,7 @@ table p {
 }
 .home-slider-area.slider-default .slider-content-area .content .subtitle-content h6 {
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: 'STC', sans-serif;
   font-size: 22px;
   font-weight: 700;
   margin: 0;
@@ -4248,7 +4293,7 @@ table p {
   -o-transform: translate(-50%, -50%);
 }
 .home-slider-area.slider-default .slider-content-area .layer-style .donate-circle-wrp .donate-content .raised-amount {
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 50px;
   line-height: 1;
   margin-bottom: 12px;
@@ -4442,7 +4487,7 @@ table p {
 }
 .about-area .about-content .text-style {
   color: #464444;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 22px;
   line-height: 1.364;
   margin-bottom: 26px;
@@ -4886,7 +4931,7 @@ table p {
 }
 .team-member .content .member-info .designation {
   color: #909090;
-  font-family: "Roboto", sans-serif;
+  font-family: "STC", sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -5011,7 +5056,7 @@ table p {
 }
 .causes-item .content .donate-info .info-item {
   background-color: #fff;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   min-width: 100px;
   padding: 7px 13px 6px;
   transition: 0.3s;
@@ -5125,7 +5170,7 @@ table p {
   }
 }
 .causes-item .admin h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: "STC", sans-serif;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 0;
@@ -5281,7 +5326,7 @@ table p {
 }
 .causes-details .donate-info .info-item {
   background-color: #f7f7f7;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   min-width: 100px;
   padding: 7px 13px 6px;
   transition: 0.3s;
@@ -5358,7 +5403,7 @@ table p {
 }
 .causes-details .progress-item .progress-line .progress-bar-line span {
   color: #fc6539;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 20px;
   position: absolute;
   right: -15px;
@@ -5380,7 +5425,7 @@ table p {
 }
 .causes-details .document-item h4 {
   color: #fff;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 20px;
   line-height: 1;
   margin: 0;
@@ -5581,15 +5626,6 @@ table p {
 .events-area.events-default-area .layer-style .shape-style1 {
   left: 40px;
   top: -122px;
-}
-@media (max-width: 1499px) {
-  .events-area.events-default-area .layer-style .shape-style1 {
-    top: -70px;
-  }
-}
-.events-area.events-default-area .layer-style .shape-style2 {
-  left: -59px;
-  top: 0;
 }
 @media (max-width: 1499px) {
   .events-area.events-default-area .layer-style .shape-style2 {
@@ -6244,7 +6280,7 @@ table p {
 }
 .testimonial-single .client-thumb-wrp .quote-icon {
   font-size: 280px;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   left: 98px;
   line-height: 212px;
   position: absolute;
@@ -6283,7 +6319,7 @@ table p {
 .testimonial-single .client-content p {
   color: #c2c2c2;
   font-size: 25px;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   line-height: 1.6;
 }
 @media only screen and (max-width: 479.98px) {
@@ -6317,7 +6353,7 @@ table p {
 }
 .testimonial-single .client-info .designation {
   color: #fc6539;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -6390,13 +6426,9 @@ table p {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.testimonial-slider-container .swiper-button-next:after,
-.testimonial-slider-container .swiper-button-prev:after {
-  display: none;
-}
 .testimonial-slider-container .swiper-button-next:hover,
 .testimonial-slider-container .swiper-button-prev:hover {
-  background-color: #283e42;
+  background-color: #2e4a6a;
 }
 .testimonial-slider-container .swiper-button-next .icon-img,
 .testimonial-slider-container .swiper-button-prev .icon-img {
@@ -7093,10 +7125,6 @@ table p {
   color: #feece7;
   line-height: 1.667;
   margin-bottom: 32px;
-}
-.icon-box-style1 .icon-box-item .content .btn-theme.btn-white {
-  background-color: transparent;
-  border-color: #fff;
 }
 .icon-box-style1 .icon-box-item .content .btn-theme.btn-white:hover {
   background: #FEA444;
@@ -8388,10 +8416,6 @@ table p {
     padding-right: 0;
   }
 }
-.post-details-content .post-details-body .content .meta {
-  justify-content: start;
-  margin-bottom: 31px;
-}
 .post-details-content .post-details-body .content .meta .post-category {
   background-color: #fc6539;
   color: #fff;
@@ -8476,7 +8500,7 @@ table p {
 }
 .post-details-content .post-details-body .content .blockquote-area .blockquote-style p {
   color: #001d23;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 25px;
   font-weight: 400;
   font-style: italic;
@@ -8494,7 +8518,7 @@ table p {
 }
 .post-details-content .post-details-body .content .blockquote-area .blockquote-style .icon {
   color: transparent;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 401.76px;
   font-weight: 400;
   left: 50%;
@@ -8905,7 +8929,7 @@ table p {
 }
 .widget-causes-item .content .donate-info .info-item {
   background-color: #fff;
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   margin-right: 15px;
   min-width: 100px;
   padding: 7px 20px 6px 32px;
@@ -9038,10 +9062,6 @@ table p {
   font-size: 15px;
   font-weight: 400;
   height: 100%;
-}
-.widget-causes-item .content .amount-info .donate-amount.donate-custom-amount .form-control::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #656565;
 }
 .widget-causes-item .content .amount-info .donate-amount.donate-custom-amount .form-control::-moz-placeholder {
   /* Firefox 19+ */
@@ -9603,8 +9623,8 @@ table p {
   position: absolute;
   text-align: center;
   width: 64px;
-  background: #FEA444;
-  background: linear-gradient(to right, #FEA444 0%, #FC6539 100%);
+  background: #2e4a6a;
+  background: linear-gradient(to right, #2e4a6a 0%, #3a5d85 100%);
 }
 .footer-area .footer-main .scroll-to-top img {
   max-width: none;
@@ -9620,7 +9640,7 @@ table p {
   }
 }
 .footer-area .widget-title {
-  color: #001d23;
+  color: #ffffff;
   font-size: 30px;
   line-height: 1;
   margin-bottom: 54px;
@@ -9652,7 +9672,7 @@ table p {
   }
 }
 .footer-area .widget-title.line-style:before {
-  background-color: #fc6539;
+  background-color: #2e4a6a;
   content: "";
   height: 4px;
   left: 0;
@@ -9694,11 +9714,11 @@ table p {
   }
 }
 .footer-area .widget-total-raised .raised-amount {
-  font-family: "Yeseva One", cursive;
+  font-family: "STC", sans-serif;
   font-size: 60px;
   line-height: 1;
-  background: #FEA444;
-  background: linear-gradient(to right, #FEA444 0%, #FC6539 100%);
+  background: #2e4a6a;
+  background: linear-gradient(to right, #2e4a6a 0%, #3a5d85 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -9753,8 +9773,8 @@ table p {
   left: 0;
   top: 0;
   width: 100%;
-  background: #FEA444;
-  background: linear-gradient(to right, #FEA444 0%, #FC6539 100%);
+  background: #2e4a6a;
+  background: linear-gradient(to right, #2e4a6a 0%, #3a5d85 100%);
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -9785,7 +9805,7 @@ table p {
   position: relative;
 }
 .footer-area .widget-menu-wrap .nav-menu li a {
-  color: #001d23;
+  color: #ffffff;
   font-size: 17px;
   display: inline-block;
   position: relative;
@@ -9801,7 +9821,7 @@ table p {
   }
 }
 .footer-area .widget-menu-wrap .nav-menu li a:after {
-  background-color: #fc6539;
+  background-color: #2e4a6a;
   bottom: -2px;
   content: "";
   display: inline-block;
@@ -9817,10 +9837,10 @@ table p {
   -o-transition: 0.5s;
 }
 .footer-area .widget-menu-wrap .nav-menu li a:hover {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .widget-menu-wrap .nav-menu li a:hover:before {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .widget-menu-wrap .nav-menu li a:hover:after {
   left: 0;
@@ -9880,7 +9900,7 @@ table p {
   position: relative;
 }
 .footer-area .widget-contact-info li.info-mail:after {
-  background-color: #595959;
+  background-color: #ffffff;
   bottom: 4px;
   content: "";
   height: 1px;
@@ -9894,19 +9914,19 @@ table p {
   -o-transition: 0.3s;
 }
 .footer-area .widget-contact-info li.info-mail:hover:after {
-  background-color: #fc6539;
+  background-color: #2e4a6a;
 }
 .footer-area .widget-contact-info li a {
-  color: #595959;
+  color: #ffffff;
 }
 .footer-area .widget-contact-info li a:hover {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .widget-social-icons {
   margin-bottom: 0;
 }
 .footer-area .widget-social-icons a {
-  color: #aba5a5;
+  color: #ffffff;
   font-size: 16px;
   margin-right: 18px;
 }
@@ -9914,14 +9934,14 @@ table p {
   margin-right: 0;
 }
 .footer-area .widget-social-icons a:hover {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .widget-newsletter form .form-control {
   background-color: transparent;
   border: 1px solid #e8e8e8;
   border-radius: 27.5px;
   box-shadow: none;
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
   height: 55px;
   margin-bottom: 20px;
@@ -9929,22 +9949,22 @@ table p {
 }
 .footer-area .widget-newsletter form .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
 }
 .footer-area .widget-newsletter form .form-control::-moz-placeholder {
   /* Firefox 19+ */
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
 }
 .footer-area .widget-newsletter form .form-control:-ms-input-placeholder {
   /* IE 10+ */
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
 }
 .footer-area .widget-newsletter form .form-control:-moz-placeholder {
   /* Firefox 18- */
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
 }
 .footer-area .widget-newsletter form .btn.btn-theme {
@@ -9961,7 +9981,7 @@ table p {
   right: 31px;
 }
 .footer-area .footer-bottom .widget-copyright p {
-  color: #999999;
+  color: #ffffff;
 }
 @media only screen and (max-width: 479.98px) {
   .footer-area .footer-bottom .widget-copyright p {
@@ -9974,10 +9994,10 @@ table p {
   }
 }
 .footer-area .footer-bottom .widget-copyright p span {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .footer-bottom .widget-copyright p a {
-  color: #fc6539;
+  color: #2e4a6a;
 }
 .footer-area .footer-bottom .widget-copyright p i {
   color: #f53400;
@@ -9989,7 +10009,7 @@ table p {
 .footer-area .footer-bottom .widget-social-icons a {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 22.5px;
-  color: #fff;
+  color: #ffffff;
   display: inline-block;
   font-size: 15px;
   height: 45px;
@@ -10002,8 +10022,8 @@ table p {
   margin-right: 0;
 }
 .footer-area .footer-bottom .widget-social-icons a:hover {
-  background-color: #fff;
-  color: #fc6539;
+  background-color: #ffffff;
+  color: #2e4a6a;
 }
 
 .reveal-footer {
@@ -10030,43 +10050,43 @@ table p {
 
 /* arabic font */
 .ibm-plex-sans-arabic-thin {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-extralight {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-light {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-regular {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-medium {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-semibold {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .ibm-plex-sans-arabic-bold {
-  font-family: "IBM Plex Sans Arabic", serif;
+  font-family: "STC", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -10080,7 +10100,7 @@ list-style-type: none; /* إزالة الرموز الافتراضية */
           .custom-list-item {
             background-color: #f9f9f9; /* لون خلفية ناعم */
             color: #333; /* لون النص */
-            font-family: 'IBM Plex Sans Arabic', sans-serif; /* الخط */
+            font-family: 'STC', sans-serif; /* الخط */
             font-size: 1rem; /* حجم النص */
             margin: 0.5rem 0; /* مسافات بين العناصر */
             padding: 0.75rem 1rem; /* حشوة داخلية */

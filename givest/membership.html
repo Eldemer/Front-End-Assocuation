@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>انضم إلينا - جمعية التجارة الإلكترونية</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="membership-page">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>انضم إلى جمعية التجارة الإلكترونية</h2>
+                <p class="lead">سواء كنت رائد أعمال، داعمًا للابتكار، أو محترفًا في مجال التجارة الإلكترونية، نقدم لك فرصة فريدة للانضمام إلى جمعيتنا</p>
+            </div>
+
+            <div class="membership-form">
+                <form id="membershipForm" action="/submit-membership" method="POST">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل</label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="membershipType">نوع العضوية</label>
+                        <select id="membershipType" name="membershipType" class="form-select" required>
+                            <option value="">اختر نوع العضوية</option>
+                            <option value="honorary">العضوية الفخرية</option>
+                            <option value="special">العضوية الشرفية</option>
+                            <option value="regular">العضوية العادية</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workField">مجال العمل أو الاهتمام</label>
+                        <input type="text" id="workField" name="workField" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documents">المستندات المطلوبة</label>
+                        <input type="file" id="documents" name="documents" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span>أوافق على الشروط والأحكام</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">قدّم طلبك الآن</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
