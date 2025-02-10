@@ -1,27 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- For font Arabic -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
-
-    <title>About – Givest – Non Profit Bootstrap 5 HTML Template</title>
+    <title data-lang-ar="عن الجمعية - جمعية التجارة الإلكترونية" data-lang-en="About Us - E-Commerce Association">عن الجمعية - جمعية التجارة الإلكترونية</title>
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
     <!--== Google Fonts ==-->
-    <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* About Section - Scoped Styles */
+        .about-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .about-section .about-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-section .about-content {
+            text-align: justify;
+        }
+
+        .about-section .about-content p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.7;
+            display: block;  /* Ensures visibility */
+            margin-bottom: 15px;  /* Adds spacing between paragraphs */
+        }
+
+        .about-section .about-content-box {
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .about-section .about-content-box h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .about-section .about-content-box p {
+            font-size: 16px;
+            color: #666;
+            display: block;  /* Ensures visibility */
+        }
+
+        .about-section .about-values ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-section .about-values ul li {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 8px;
+            display: block;  /* Ensures visibility */
+        }
+
+        /* Responsive Enhancements */
+        @media (max-width: 768px) {
+            .about-section .about-content {
+                text-align: center;
+            }
+        }
+    </style>
+    <link href="assets/css/swiper.min.css" rel="stylesheet"/>
 
     <!--== Bootstrap CSS ==-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
     <!--== Icofont CSS ==-->
     <link href="assets/css/icofont.css" rel="stylesheet"/>
     <!--== ElegantIcons CSS ==-->
@@ -35,114 +100,36 @@
     <!--== Slicknav CSS ==-->
     <link href="assets/css/slicknav.css" rel="stylesheet"/>
     <!--== Swiper CSS ==-->
-    <link href="assets/css/swiper.min.css" rel="stylesheet"/>
-    <!--== Main Style CSS ==-->
-    <link href="assets/css/style.css" rel="stylesheet" />
 
+    <!--== Main Style CSS ==-->
+    <link href="assets/css/style.css" rel="stylesheet" />  
 </head>
 
 <body>
 
-<!--wrapper start-->
-<div class="wrapper about-page-wrapper">
-
-  <!--== Start Preloader Content ==-->
-  <div class="preloader-wrap">
-  	<div class="preloader">
-	    <span class="dot"></span>
-	    <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-	    </div>
-  	</div>
-  </div>
-  <!--== End Preloader Content ==-->
-
-  <!--== Start Header Wrapper ==-->
-  <!-- <header class="header-area header-default sticky-header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-5 col-sm-3 col-md-3 col-lg-2 pr-0">
-          <div class="header-logo-area">
-            <a href="index.html">
-              <img class="logo-main" src="assets/img/logo.png" alt="Logo" />
-              <img class="logo-light" src="assets/img/logo.png" alt="Logo" />
-            </a>
-          </div>
-        </div>
-        <div class="col-7 col-sm-9 col-md-9 col-lg-10">
-          <div class="header-align">
-            <div class="header-navigation-area">
-              <ul class="main-menu nav justify-content-center">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="about.html">About Us</a></li>
-                <li class="has-submenu"><a href="causes.html">Causes</a>
-                  <ul class="submenu-nav">
-                    <li><a href="causes.html">Causes</a></li>
-                    <li><a href="causes-details.html">Causes Details</a></li>
-                  </ul>
-                </li>
-                <li class="has-submenu"><a href="blog.html">Blog</a>
-                  <ul class="submenu-nav">
-                    <li><a href="blog.html">Blog Grid</a></li>
-                    <li><a href="blog-details.html">Blog Single</a></li>
-                  </ul>
-                </li>
-                <li class="has-submenu"><a href="index.html">Pages</a>
-                  <ul class="submenu-nav">
-                    <li><a href="event-details.html">Event Details</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="header-action-area">
-              <button class="btn-menu d-xl-none">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <a href="contact.html" class="btn-theme btn-gradient btn-slide btn-style">Give Support <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header> -->
-  <!--== End Header Wrapper ==-->
-
-<!--== بداية الهيدر ==-->
-<header class="header-area header-default sticky-header" dir="rtl" style="background-color: #ffffff; border-bottom: 2px solid #007bff;">
+<header class="header-area header-default sticky-header">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-5 col-sm-3 col-md-3 col-lg-2 pl-0">
+      <div class="col-lg-2 pl-0">
         <div class="header-logo-area">
           <a href="index.html">
             <img class="logo-main" src="assets/img/logo.png" alt="الشعار" />
-            <img class="logo-light" src="assets/img/logo.png" alt="الشعار" />
           </a>
         </div>
       </div>
-      <div class="col-7 col-sm-9 col-md-9 col-lg-10">
-        <div class="header-align ">
+      <div class="col-lg-10">
+        <div class="header-align">
           <div class="header-navigation-area">
-            <ul class="main-menu nav justify-content-center" style="margin: 0; padding: 0;">
-              <li  class="ibm-plex-sans-arabic-bold "><a href="index.html" style="color:black; font-weight: bold;" data-i18n="home">الرئيسية</a></li>
-              <li  class="ibm-plex-sans-arabic-bold "><a href="about.html" style="color: black; font-weight: bold;" data-i18n="about">عن الجمعية</a></li>
-              <li  class="ibm-plex-sans-arabic-bold "><a href="membership.html" style="color: black; font-weight: bold;" data-i18n="membership">العضوية</a></li>
-              <li  class="ibm-plex-sans-arabic-bold "><a href="sponsors.html" style="color: black; font-weight: bold;" data-i18n="sponsors">الرعاة</a></li>
-              <li  class="ibm-plex-sans-arabic-bold "><a href="rules.html" style="color: black; font-weight: bold;" data-i18n="rules">الأنظمة والقوانين</a></li>
+            <ul class="main-menu nav justify-content-center">
+              <li><a href="index.html" data-lang-ar="الرئيسية" data-lang-en="Home">الرئيسية</a></li>
+              <li class="active"><a href="about.html" data-lang-ar="عن الجمعية" data-lang-en="About Us">عن الجمعية</a></li>
+              <li><a href="membership.html" data-lang-ar="العضوية" data-lang-en="Membership">العضوية</a></li>
+              <li><a href="sponsors.html" data-lang-ar="الرعاة" data-lang-en="Sponsors">الرعاة</a></li>
+              <li><a href="contact.html" data-lang-ar="تواصل معنا" data-lang-en="Contact Us">تواصل معنا</a></li>
             </ul>
           </div>
           <div class="header-action-area">
-            <button class="btn-menu d-xl-none">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <select  class="ibm-plex-sans-arabic-bold " id="languageSwitcher" style="margin-left: 10px; padding: 5px; border:0ch">
+            <select id="languageSwitcher" class="border-0 p-2">
               <option value="ar" selected>العربية</option>
               <option value="en">English</option>
             </select>
@@ -151,494 +138,155 @@
       </div>
     </div>
   </div>
-</header> 
-<!--== نهاية الهيدر ==-->
+</header>
 
+<main class="main-content">
 
-
-
-
-  <main class="main-content site-wrapper-reveal">
-    <!--== Start Page Title Area ==-->
-    <section class="page-title-area" data-bg-img="assets/img/photos/bg-page-title.jpg">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-title-content text-center">
-              <h2 class="title text-white">About Us</h2>
-              <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">//</span></a><span class="active">About</span></div>
-            </div>
+  <section class="page-title-area" data-bg-img="assets/img/photos/bg-page-title.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-title-content text-center">
+            <h2 class="title text-white" data-lang-ar="عن الجمعية" data-lang-en="About Us">About Us</h2>
+            <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">//</span></a><span class="active">About</span></div>
           </div>
         </div>
       </div>
-    </section>
-    <!--== End Page Title Area ==-->
-
-    <!--== Start About Area ==-->
-    <section class="about-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9">
-            <div class="section-title">
-              <h5 class="subtitle line-theme-color">About Us.</h5>
-              <h2 class="title"><span>Givest</span> is The Non Profitable Organization.</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="thumb thumb-style">
-              <img src="assets/img/about/3.jpg" alt="Image-Givest">
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="about-content">
-              <p class="text-style">Lorem Ipsum simply dummy text the printing and typesettin industry. Lorem Ipsum has been the industry's standard dumm text ever since the unknown.</p>
-              <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when and unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-            <div class="content-box-wrp">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="content-box-item mb-md-30">
-                    <h3 class="title">Mission</h3>
-                    <img class="img-line-shape" src="assets/img/shape/line-s1.png" alt="Image-Givest">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since 1500 when unknown printer took a galley of type and scram bled it to make a type specimen book.</p>
-                    <p class="font-family2 mb-0">Lorem Ipsum simply dummy text the printing & typesetting industry been the industry standard dummy make type specimen book.</p>
-                    <img class="bg-line-shape" src="assets/img/shape/line5.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="content-box-item" data-bg-color="#fea444">
-                    <h3 class="title">Vission</h3>
-                    <img class="img-line-shape" src="assets/img/shape/line-s1.png" alt="Image-Givest">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since 1500 when unknown printer took a galley of type and scram bled it to make a type specimen book.</p>
-                    <p class="font-family2 mb-0">Lorem Ipsum simply dummy text the printing & typesetting industry been the industry standard dummy make type specimen book.</p>
-                    <img class="bg-line-shape" src="assets/img/shape/line5.png" alt="Image-Givest">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End About Area ==-->
-
-    <!--== Start Team Area ==-->
-    <section class="team-area team-fluid-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3 col-xl-4 offset-xl-0">
-            <div class="section-title">
-              <h5 class="subtitle line-theme-color mb-7">Volunteer Team</h5>
-              <h2 class="title title-style">Volunteer Team of Givest. <img class="img-shape" src="assets/img/shape/3.png" alt="Image-Givest"></h2>
-              <div class="desc">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since and unknown printer took scrambled it make specimen book.</p>
-                <a href="volunteer.html" class="btn-theme btn-gradient btn-slide">Join Now <img class="icon icon-img" src="assets/img/icons/arrow-line-right2.png" alt="Icon"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-8">
-            <div class="team-member-items">
-              <div class="swiper-container team-slider-container">
-                <div class="swiper-wrapper team-slider">
-                  <div class="swiper-slide team-member">
-                    <div class="thumb">
-                      <img src="assets/img/team/1.jpg" alt="Image">
-                      <div class="social-icons">
-                        <a href="#"><i class="icofont-facebook"></i></a>
-                        <a href="#"><i class="icofont-skype"></i></a>
-                        <a href="#"><i class="icofont-twitter"></i></a> 
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="member-info">
-                        <h4 class="name"><a href="#/">Harvey Harrington</a></h4>
-                        <h6 class="designation">Senior Volunteer</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide team-member">
-                    <div class="thumb">
-                      <img src="assets/img/team/2.jpg" alt="Image">
-                      <div class="social-icons">
-                        <a href="#"><i class="icofont-facebook"></i></a>
-                        <a href="#"><i class="icofont-skype"></i></a>
-                        <a href="#"><i class="icofont-twitter"></i></a> 
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="member-info">
-                        <h4 class="name"><a href="#/">Alejandra Bobbitt</a></h4>
-                        <h6 class="designation">Senior Volunteer</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide team-member">
-                    <div class="thumb">
-                      <img src="assets/img/team/3.jpg" alt="Image">
-                      <div class="social-icons">
-                        <a href="#"><i class="icofont-facebook"></i></a>
-                        <a href="#"><i class="icofont-skype"></i></a>
-                        <a href="#"><i class="icofont-twitter"></i></a> 
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div class="member-info">
-                        <h4 class="name"><a href="#/">Sherika Hankins</a></h4>
-                        <h6 class="designation">Senior Volunteer</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Team Area ==-->
-
-    <!--== Start Funfact Area ==-->
-    <section class="funfact-area funfact-default-area">
-      <div class="container">
-        <div class="row row-gutter-0 funfact-items-style1">
-          <div class="col-sm-6 col-md-4 funfact-item">
-            <div class="inner-content">
-              <div class="icon-box">
-                <img class="icon" src="assets/img/icons/f1.png" alt="Image-Givest">
-                <img class="shape-img" src="assets/img/shape/4.png" alt="Image-Givest">
-              </div>
-              <div class="content">
-                <div class="number">
-                  <h2><span class="counter-animate">598</span>K</h2>
-                </div>
-                <img class="line-shape" src="assets/img/shape/funfact-line1.png" alt="Image-Givest">
-                <p class="title">// Poor People</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 funfact-item">
-            <div class="inner-content">
-              <div class="icon-box">
-                <img class="icon" src="assets/img/icons/f2.png" alt="Image-Givest">
-                <img class="shape-img" src="assets/img/shape/4.png" alt="Image-Givest">
-              </div>
-              <div class="content">
-                <div class="number">
-                  <h2><span class="counter-animate">897</span>M</h2>
-                </div>
-                <img class="line-shape" src="assets/img/shape/funfact-line1.png" alt="Image-Givest">
-                <p class="title">// Fund raised</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 funfact-item">
-            <div class="inner-content">
-              <div class="icon-box">
-                <img class="icon" src="assets/img/icons/f3.png" alt="Image-Givest">
-                <img class="shape-img" src="assets/img/shape/4.png" alt="Image-Givest">
-              </div>
-              <div class="content">
-                <div class="number">
-                  <h2><span class="counter-animate">998</span>+</h2>
-                </div>
-                <img class="line-shape" src="assets/img/shape/funfact-line1.png" alt="Image-Givest">
-                <p class="title">// Active Member</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Funfact Area ==-->
-
-    <!--== Start Testimonial Area ==-->
-    <section class="testimonial-area testimonial-default-area bgcolor-theme3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-4 col-xl-5">
-            <div class="title-wrp" data-bg-img="assets/img/testimonial/bg-testi1.jpg">
-              <div class="section-title">
-                <h5 class="subtitle line-white-color text-white mb-7">Recent Events</h5>
-                <h2 class="title title-style text-white">What People Say About Us. <img class="img-shape" src="assets/img/shape/3.png" alt="Image-Givest"></h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-7 col-xl-6">
-            <div class="testimonial-content">
-              <div class="testimonial-slider-content">
-                <div class="swiper-container testimonial-slider-container">
-                  <div class="swiper-wrapper testimonial-slider">
-                    <div class="swiper-slide testimonial-single">
-                      <div class="client-thumb-wrp">
-                        <div class="client-thumb">
-                          <img src="assets/img/testimonial/1.png" alt="Image-Givest">
-                        </div>
-                        <div class="quote-icon">“</div>
-                      </div>
-                      <div class="client-content">
-                        <p>The leap into electronic typesetting, essentially unchanged was popularised the release Letraset sheets containing and more recently desktop publishing like Aldus maker including.</p>
-                      </div>
-                      <div class="client-info">
-                        <img class="shape-line-img" src="assets/img/shape/line-t1.png" alt="Image-Givest">
-                        <h4 class="name">Harvey Harrington</h4>
-                        <h6 class="designation">Senior Volunteer</h6>
-                      </div>
-                    </div>
-                    <div class="swiper-slide testimonial-single">
-                      <div class="client-thumb-wrp">
-                        <div class="client-thumb">
-                          <img src="assets/img/testimonial/2.png" alt="Image-Givest">
-                        </div>
-                        <div class="quote-icon">“</div>
-                      </div>
-                      <div class="client-content">
-                        <p>It is long established fact that reader will distract by the readable content a page when looking atten layout. The point of using  and that it has a normal distribution of letters</p>
-                      </div>
-                      <div class="client-info">
-                        <img class="shape-line-img" src="assets/img/shape/line-t1.png" alt="Image-Givest">
-                        <h4 class="name">Julia Steve</h4>
-                        <h6 class="designation">Senior Volunteer</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Add Arrows -->
-                  <div class="navigation-wrp">
-                    <div class="swiper-button-prev"><img class="icon-img" src="assets/img/icons/test-arrow-left.png" alt="Image-Icon"></div>
-                    <div class="swiper-button-next"><img class="icon-img" src="assets/img/icons/test-arrow-right.png" alt="Image-Icon"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Testimonial Area ==-->
-
-    <!--== Start Brand Logo Area ==-->
-    <section class="brand-logo-area brand-logo-default-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-4 offset-lg-0 col-xl-4">
-            <div class="section-title text-center text-lg-start">
-              <h2 class="title title-style mt-xl-30">Our Current Sponsors. <img class="img-shape" src="assets/img/shape/3.png" alt="Image-Givest"></h2>
-            </div>
-          </div>
-          <div class="col-lg-8 col-xl-7 offset-xl-1">
-            <div class="brand-logo-content">
-              <div class="row row-cols-3 row-cols-sm-5">
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/1.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/2.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/3.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/4.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/5.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/6.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/7.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/8.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/9.png" alt="Image-Givest">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="brand-logo-item">
-                    <img src="assets/img/brand-logo/10.png" alt="Image-Givest">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Brand Logo Area ==-->
-  </main>
-
-  <!--== Start Footer Area Wrapper ==-->
-  <footer class="footer-area">
-    <div class="footer-main">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div class="widget-item">
-              <div class="about-widget">
-                <a class="footer-logo" href="index.html">
-                  <img src="assets/img/logo.png" alt="Logo">
-                </a>
-                <p>Lorem Ipsum is simply dummy text of the industry orem Ipsum has been the industry's since the when unknown.</p>
-                <div class="widget-total-raised">
-                  <h4 class="raised-title">Total Raised:</h4>
-                  <div class="raised-amount">$8,965</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-            <div class="widget-item">
-              <h4 class="widget-title line-style">Gallery</h4>
-              <div class="widget-gallery">
-                <div class="row row-cols-3 row-gutter-10">
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery1.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery2.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery3.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery4.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery5.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="gallery-item">
-                      <img src="assets/img/photos/gallery6.jpg" alt="Givest-HasTech">
-                      <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>              
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-            <div class="widget-item menu-wrap-two-column">
-              <h4 class="widget-title line-style">Quick Links</h4>
-              <nav class="widget-menu-wrap">
-                <div class="row">
-                  <div class="col-6 col-sm-6 col-md-6 pr-sm-5">
-                    <ul class="nav-menu nav">
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="blog.html">Blog Post Terms</a></li>
-                      <li><a href="#/">Conditions</a></li>
-                      <li><a href="#/">Privacy Policy</a></li>
-                      <li><a href="#/">Documentation</a></li>
-                      <li><a href="#/">Donners</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-6 pl-sm-5">
-                    <ul class="nav-menu nav align-right">
-                      <li><a href="volunteer.html">Become Volunteer</a></li>
-                      <li><a href="#/">Quick Fundraise</a></li>
-                      <li><a href="#/">Give Donation</a></li>
-                      <li><a href="volunteer.html">Become Volunteer</a></li>
-                      <li><a href="causes-details.html">Food And Water</a></li>
-                      <li><a href="causes-details.html">Medical facilities</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--== Scroll Top Button ==-->
-      <div class="scroll-to-top"><img src="assets/img/icons/arrow-up-line.png" alt="Icon-Image"></div>
     </div>
-    <div class="footer-bottom">
+  </section>
+
+  <!--== Start About Section ==-->
+  <section class="about-section">
       <div class="container">
-        <div class="footer-bottom-content">
           <div class="row align-items-center">
-            <div class="col-12">
-              <div class="widget-copyright text-center">
-                <p>© 2025 <span>Givest</span>. Made with <i class="icon_heart"></i> by <a target="_blank" href="https://www.hasthemes.com">HasThemes</a></p>
+              <div class="col-lg-6">
+                  <div class="about-content">
+                      <h2 class="about-title" data-lang-ar="تعريف بالجمعية" data-lang-en="About the Association">تعريف بالجمعية</h2>
+                      <p data-lang-ar="جمعية التجارة الإلكترونية هي جمعية أهلية مهنية تأسست بموجب القرار الوزاري رقم 10146. نسعى لدعم الابتكار، تعزيز القدرات الرقمية، وربط رواد الأعمال بالفرص في السوق الرقمي السعودي." data-lang-en="The E-Commerce Association is a non-profit professional association established under Ministerial Decision No. 10146. We aim to support innovation, enhance digital capabilities, and connect entrepreneurs with opportunities in the Saudi digital market.">
+                          جمعية التجارة الإلكترونية هي جمعية أهلية مهنية تأسست بموجب القرار الوزاري رقم 10146. نسعى لدعم الابتكار، تعزيز القدرات الرقمية، وربط رواد الأعمال بالفرص في السوق الرقمي السعودي.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                  <img src="assets/img/about/association.jpg" class="img-fluid rounded shadow-lg" alt="About Us">
+              </div>
+          </div>
+
+          <!-- Mission, Vision, and Values -->
+          <div class="row mt-5">
+              <div class="col-md-4">
+                  <div class="about-content-box shadow-sm bg-white rounded p-4">
+                      <h3 data-lang-ar="الرؤية" data-lang-en="Vision">الرؤية</h3>
+                      <p data-lang-ar="الريادة والابتكار في سوق التجارة الإلكترونية، مع التركيز على دعم الأفراد، المؤسسات، والمجتمع." data-lang-en="Leadership and innovation in the e-commerce market, with a focus on supporting individuals, institutions, and the community.">
+                          الريادة والابتكار في سوق التجارة الإلكترونية، مع التركيز على دعم الأفراد، المؤسسات، والمجتمع.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="about-content-box shadow-sm bg-warning rounded p-4">
+                      <h3 data-lang-ar="الرسالة" data-lang-en="Mission">الرسالة</h3>
+                      <p data-lang-ar="أن نكون المحرك الرئيسي في تعزيز التجارة الإلكترونية، عبر تقديم التوعية، التدريب، والشراكة المحلية والدولية." data-lang-en="To be the main driver in promoting e-commerce through awareness, training, and local and international partnerships.">
+                          أن نكون المحرك الرئيسي في تعزيز التجارة الإلكترونية، عبر تقديم التوعية، التدريب، والشراكة المحلية والدولية.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="about-content-box shadow-sm bg-primary text-white rounded p-4 about-values">
+                      <h3 data-lang-ar="القيم" data-lang-en="Values">القيم</h3>
+                      <ul>
+                          <li data-lang-ar="✅ النزاهة والشفافية" data-lang-en="✅ Integrity and Transparency">✅ النزاهة والشفافية</li>
+                          <li data-lang-ar="✅ العمل بروح الفريق" data-lang-en="✅ Teamwork">✅ العمل بروح الفريق</li>
+                          <li data-lang-ar="✅ التطوير المستمر" data-lang-en="✅ Continuous Development">✅ التطوير المستمر</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--== End About Section ==-->
+
+  <!--== Start Team Area ==-->
+   <section class="team-area team-fluid-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-xl-4 offset-xl-0">
+          <div class="section-title">
+            <h5 class="subtitle line-theme-color mb-7" data-lang-ar="فريق المتطوعين" data-lang-en="Volunteer Team">فريق المتطوعين</h5>
+            <h2 class="title title-style" data-lang-ar="فريق المتطوعين من Givest" data-lang-en="Volunteer Team of Givest.">فريق المتطوعين من Givest.</h2>
+            <div class="desc">
+              <p data-lang-ar="Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since and unknown printer took scrambled it make specimen book." data-lang-en="Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since and unknown printer took scrambled it make specimen book.">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard dummy text ever since and unknown printer took scrambled it make specimen book.
+              </p>
+              <a href="volunteer.html" class="btn-theme btn-gradient btn-slide" data-lang-ar="انضم الآن" data-lang-en="Join Now">انضم الآن</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <div class="team-member-items">
+            <div class="swiper-container team-slider-container">
+              <div class="swiper-wrapper team-slider">
+                <div class="swiper-slide team-member">
+                  <div class="thumb">
+                    <img src="assets/img/team/1.jpg" alt="Image">
+                    <div class="social-icons">
+                      <a href="#"><i class="icofont-facebook"></i></a> 
+                      <a href="#"><i class="icofont-skype"></i></a>
+                      <a href="#"><i class="icofont-twitter"></i></a> 
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="member-info">
+                      <h4 class="name" data-lang-ar="احمد" data-lang-en="Harvey Harrington"><a href="#/">Harvey Harrington</a></h4>
+                      <h6 class="designation" data-lang-ar="كبير المتطوعين" data-lang-en="Senior Volunteer">Senior Volunteer</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide team-member">
+                  <div class="thumb">
+                    <img src="assets/img/team/2.jpg" alt="Image">
+                    <div class="social-icons">
+                      <a href="#"><i class="icofont-facebook"></i></a>
+                      <a href="#"><i class="icofont-skype"></i></a>
+                      <a href="#"><i class="icofont-twitter"></i></a> 
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="member-info">
+                      <h4 class="name" data-lang-ar="احمد" data-lang-en="Harvey Harrington"><a href="#/">Harvey Harrington</a></h4>
+                      <h6 class="designation" data-lang-ar="كبير المتطوعين" data-lang-en="Senior Volunteer">Senior Volunteer</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide team-member">
+                  <div class="thumb">
+                    <img src="assets/img/team/3.jpg" alt="Image">
+                    <div class="social-icons">
+                      <a href="#"><i class="icofont-facebook"></i></a>
+                      <a href="#"><i class="icofont-skype"></i></a>
+                      <a href="#"><i class="icofont-twitter"></i></a> 
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="member-info">
+                      <h4 class="name" data-lang-ar="احمد" data-lang-en="Harvey Harrington"><a href="#/">Harvey Harrington</a></h4>
+                      <h6 class="designation" data-lang-ar="كبير المتطوعين" data-lang-en="Senior Volunteer">Senior Volunteer</h6>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="shape-layer">
-      <img src="assets/img/shape/footer-line.png" alt="Image-Givest">
-    </div>
-  </footer>
-  <!--== End Footer Area Wrapper ==-->
+  </section>
+  <!--== End Team Area ==-->
 
-  <!--== Start Side Menu ==-->
-  <aside class="off-canvas-wrapper">
-    <div class="off-canvas-inner">
-      <div class="off-canvas-overlay"></div>
-      <!-- Start Off Canvas Content Wrapper -->
-      <div class="off-canvas-content">
-        <!-- Off Canvas Header -->
-        <div class="off-canvas-header">
-          <div class="logo-area">
-            <a href="index.html"><img src="assets/img/logo.png" alt="Logo" /></a>
-          </div>
-          <div class="close-action">
-            <button class="btn-close"><i class="icofont-close"></i></button>
-          </div>
-        </div>
+</main>
 
-        <div class="off-canvas-item">
-          <!-- Start Mobile Menu Wrapper -->
-          <div class="res-mobile-menu menu-active-one">
-            <!-- Note Content Auto Generate By Jquery From Main Menu -->
-          </div>
-          <!-- End Mobile Menu Wrapper -->
-        </div>
-        <!-- Off Canvas Footer -->
-        <div class="off-canvas-footer"></div>
-      </div>
-      <!-- End Off Canvas Content Wrapper -->
-    </div>
-  </aside>
-  <!--== End Side Menu ==-->  
-</div>
-
-<!--=======================Javascript============================-->
-
+<!--== JavaScript for Localization ==-->
 <!--=== Modernizr Min Js ===-->
 <script src="assets/js/modernizr.js"></script>
 <!--=== jQuery Min Js ===-->
@@ -674,62 +322,47 @@
 
 <!--=== Custom Js ===-->
 <script src="assets/js/custom.js"></script>
-
-
-<!-- for Localization -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.9.1/i18next.min.js"></script>
+<script src="assets/js/custom.js"></script>
 <script>
-  // تعريف النصوص
-  const resources = {
-    en: {
-      translation: {
-        home: "Home",
-        about: "About Us",
-        membership: "Membership",
-        sponsors: "Sponsors",
-        rules: "Rules & Regulations",
-      },
-    },
-    ar: {
-      translation: {
-        home: "الرئيسية",
-        about: "عن الجمعية",
-        membership: "العضوية",
-        sponsors: "الرعاة",
-        rules: "الأنظمة والقوانين",
-      },
-    },
-  };
 
-  // تهيئة i18next
-  i18next.init(
-    {
-      lng: "ar", // اللغة الافتراضية
-      debug: true,
-      resources,
-    },
-    function (err, t) {
-      updateContent(); // تحديث النصوص عند التهيئة
-    }
-  );
+// Check if direction attribute is correctly applied when switching language
+function switchLanguage(lang) {
+  document.querySelectorAll("[data-lang-ar], [data-lang-en]").forEach(el => {
+      const langText = lang === "ar" ? el.getAttribute("data-lang-ar") : el.getAttribute("data-lang-en");
+      el.textContent = langText;
+  });
 
-  // تحديث النصوص بناءً على اللغة
-  function updateContent() {
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      el.textContent = i18next.t(key);
-    });
+  document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+  // Check that this is being set properly
+  console.log('Direction set to:', lang === "ar" ? "rtl" : "ltr");
+}
+document.getElementById("languageSwitcher").addEventListener("change", function () {
+  const lang = this.value;
+  switchLanguage(lang);
+});
+
+function switchLanguage(lang) {
+  // Switch text content for all elements that support both languages
+  document.querySelectorAll("[data-lang-ar], [data-lang-en]").forEach(el => {
+      const langText = lang === "ar" ? el.getAttribute("data-lang-ar") : el.getAttribute("data-lang-en");
+      el.textContent = langText;
+  });
+
+  // Set the direction of the page (RTL or LTR)
+  document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+  // Adjust the body class to ensure that RTL/LTR styles are applied
+  if (lang === "ar") {
+      document.body.classList.add("rtl");
+      document.body.classList.remove("ltr");
+  } else {
+      document.body.classList.add("ltr");
+      document.body.classList.remove("rtl");
   }
+}
 
-  // تبديل اللغة عند اختيارها
-  document
-    .getElementById("languageSwitcher")
-    .addEventListener("change", function (e) {
-      const selectedLanguage = e.target.value;
-      i18next.changeLanguage(selectedLanguage, updateContent);
-    });
 </script>
 
 </body>
-
 </html>
