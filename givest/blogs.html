@@ -19,8 +19,10 @@
         <!-- Section Title -->
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title mb-3">المدونة</h2>
-                <p class="text-muted">أحدث المقالات والأخبار في مجال التجارة الإلكترونية</p>
+                <div class="section-title">
+                    <h2 data-lang-ar="المدونة">Blog</h2>
+                    <p data-lang-ar="أحدث المقالات والأخبار">Latest Articles and News</p>
+                </div>
             </div>
         </div>
 
@@ -38,12 +40,15 @@
                             <span><i class="bi bi-tag"></i> تجارة إلكترونية</span>
                         </div>
                         <h3 class="blog-title">
-                            <a href="#">مستقبل التجارة الإلكترونية في المملكة</a>
+                            <a href="#" data-lang-ar="مستقبل التجارة الإلكترونية في المملكة">Future of E-commerce in the Kingdom</a>
                         </h3>
-                        <p class="blog-excerpt">
-                            تحليل شامل لمستقبل التجارة الإلكترونية في المملكة وتأثير رؤية 2030 على نمو القطاع
+                        <p class="blog-excerpt" data-lang-ar="تحليل شامل لمستقبل التجارة الإلكترونية في المملكة وتأثير رؤية 2030">
+                            Comprehensive analysis of the future of e-commerce in the Kingdom and the impact of Vision 2030
                         </p>
-                        <a href="#" class="read-more">اقرأ المزيد <i class="bi bi-arrow-left"></i></a>
+                        <a href="#" class="read-more">
+                            <span data-lang-ar="اقرأ المزيد">Read More</span>
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -182,6 +187,27 @@
 
 <!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Language switcher -->
+<select id="languageSwitcher" onchange="changeLanguage(this.value)">
+    <option value="ar">العربية</option>
+    <option value="en">English</option>
+</select>
+
+<script>
+function changeLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Set initial language from localStorage or default to Arabic
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+    document.getElementById('languageSwitcher').value = savedLang;
+    changeLanguage(savedLang);
+});
+</script>
 
 </body>
 </html> 

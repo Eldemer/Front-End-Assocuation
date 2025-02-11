@@ -400,6 +400,62 @@ body {
     transform: translateY(0);
   }
 }
+.about-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+
+.about-section .about-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section .about-content p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.about-section .about-content-box {
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .about-content-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.about-section .about-content-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+.about-section .about-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section .about-values ul li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .about-section .about-content {
+      text-align: center;
+  }
+}
 /* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
