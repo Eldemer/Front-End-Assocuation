@@ -131,7 +131,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 150vh;
   background: linear-gradient(135deg, #f0f5ff, #ffffff);
 }
 
