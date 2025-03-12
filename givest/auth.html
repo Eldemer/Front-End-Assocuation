@@ -22,7 +22,7 @@
             display: none;
             z-index: 1000;
         }
-        
+
         .success-popup.show {
             display: block;
             animation: fadeIn 0.5s ease-in-out, fadeOut 3s 2s forwards;
@@ -75,10 +75,20 @@
             <form id="register-form" class="auth-form" onsubmit="return handleRegister(event)">
                 <h2>Create an Account</h2>
                 <div class="form-group">
-                    <input type="text" id="register-username" placeholder="Full Name" required>
+                    <input type="text" id="register-firstname" placeholder="First Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="register-phone" placeholder="Phone Number" required>
+                    <input type="text" id="register-lastname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="register-familyname" placeholder="Family Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="register-phone" placeholder="Mobile Number" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="register-localization" placeholder="Localization" required>
                 </div>
                 <div class="form-group">
                     <input type="email" id="register-email" placeholder="Email Address" required>
@@ -86,6 +96,29 @@
                 <div class="form-group">
                     <input type="password" id="register-password" placeholder="Password" required>
                 </div>
+                <!-- Nationality Field -->
+                <div class="form-group">
+                    <input type="text" id="register-nationality" placeholder="Nationality" required>
+                </div>
+
+              <!-- Gender Radio Buttons -->
+            
+                <div class="form-group d-flex" style="display: flex; align-items: center;">
+                    <label style="margin-right: 10px;">Gender:</label>
+                    <div style="margin-right: 15px; display: flex; align-items: center;">
+                        <input type="radio" id="gender-male" name="gender" value="male" required>
+                        <label for="gender-male" style="margin-left: 5px;">Male</label>
+                    </div>
+                    <div style="margin-right: 15px; display: flex; align-items: center;">
+                        <input type="radio" id="gender-female" name="gender" value="female" required>
+                        <label for="gender-female" style="margin-left: 5px;">Female</label>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <input type="radio" id="gender-other" name="gender" value="other" required>
+                        <label for="gender-other" style="margin-left: 5px;">Other</label>
+                    </div>
+                </div>
+
                 <button type="submit" class="btn-theme">Register</button>
                 <p class="toggle-link">Already have an account? <a href="#" onclick="showForm('login')">Login</a></p>
             </form>
@@ -143,12 +176,22 @@
 
     function handleRegister(event) {
         event.preventDefault();
-        const username = document.getElementById("register-username").value;
+        const firstName = document.getElementById("register-firstname").value;
+        const lastName = document.getElementById("register-lastname").value;
+        const familyName = document.getElementById("register-familyname").value;
         const phone = document.getElementById("register-phone").value;
+        const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+        const localization = document.getElementById("register-localization").value;
         const email = document.getElementById("register-email").value;
         const password = document.getElementById("register-password").value;
+        const nationality = document.getElementById("register-nationality").value;
 
-        users.push({ userName: username, phone: phone, email: email, password: password });
+        if (gender === '') {
+            alert("Please select a gender!");
+            return;
+        }
+
+        users.push({ firstName, lastName, familyName, phone, gender, localization, email, password, nationality });
 
         showPopup("Registration Successful! Redirecting to login...");
         setTimeout(() => {
